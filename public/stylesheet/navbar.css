@@ -9,6 +9,10 @@ body {
   background: #fff;
 }
 
+p {
+  margin: 0;
+}
+
 .navbar {
   width: 100%;
   padding: 1rem 5%;

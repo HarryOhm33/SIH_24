@@ -1,0 +1,19 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+
+<div
+  class="plants-box"
+  style="
+    background-image: url(https://images.unsplash.com/photo-1476553986076-d59060d397e4?q=80&w=1832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  "
+>
+  <% for(plant of plants) {%>
+  <div class="card" onclick="location.href='/garden/plants/<%- plant.id %>';">
+    <img src="<%=plant.images[1]%>" alt="img.jpg" />
+    <div class="m-description">
+      <h2><%- plant.ayurvedic_name %></h2>
+      <p>Common Name : <%- plant.common_names.join(', ') %></p>
+      <p>Family : <%- plant.family %></p>
+    </div>
+  </div>
+  <% } %>
+</div>

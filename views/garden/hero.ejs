@@ -1,80 +1,93 @@
 <% layout("/layouts/boilerplate.ejs") -%>
-<div
-  class="box"
-  style="
-    background-image: url(https://images.unsplash.com/photo-1719179512969-84e9863abbf2?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  "
->
-  <div class="hero-1">
-    <h1>Herbal Haven</h1>
-    <h3>
-      Discover, learn, and experience the world of medicinal plants from the
-      comfort of your home.
-    </h3>
-    <div class="hero-1-btns">
-      <a href="#" class="btn" type="button"
-        >Start Exploring &nbsp;<i class="fa-solid fa-arrow-right"></i></a
-      ><a href="#" class="btn" type="button"
-        >Take A Virtual Tour &nbsp;<i class="fa-solid fa-arrow-right"></i
+<div class="box-container">
+  <div
+    class="box"
+    style="
+      background-image: url(https://images.unsplash.com/photo-1459478309853-2c33a60058e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    "
+  >
+    <div class="hero-1">
+      <h1>EcoHerb Atlas</h1>
+      <h3>
+        Discover, learn, and experience the world of medicinal plants from the
+        comfort of your home.
+      </h3>
+      <div class="hero-1-btns">
+        <a href="/garden/plants" class="btn" type="button"
+          >Start Exploring &nbsp;<i class="fa-solid fa-arrow-right"></i
+        ></a>
+        <!-- <a href="#" class="btn" type="button"
+          >Take A Virtual Tour &nbsp;<i class="fa-solid fa-arrow-right"></i
+        ></a> -->
+      </div>
+    </div>
+  </div>
+  <div
+    class="box"
+    style="
+      background-image: url(https://images.unsplash.com/photo-1624723688471-551bbed3ea18?q=80&w=1981&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    "
+  >
+    <div class="hero-2">
+      <h1>Explore Some Of Our Featured Herbs</h1>
+      <div class="featured-plants">
+        <% for (featuredPlant of featuredPlants) { %>
+        <div
+          onclick="location.href='/garden/plants/<%- featuredPlant.id %>';"
+          class="featured-card"
+        >
+          <img src="<%= featuredPlant.images[1] %>" alt="" />
+          <div class="f-description">
+            <h2><%- featuredPlant.ayurvedic_name %></h2>
+            <p>Family : <%- featuredPlant.family %></p>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <a href="/garden/plants" class="btn hero-2-btn" type="button"
+        >Discover More &nbsp;<i class="fa-solid fa-arrow-right"></i
       ></a>
     </div>
   </div>
-</div>
-<div
-  class="box"
-  style="
-    background-image: url(https://images.unsplash.com/photo-1719179513227-15758bc779ed?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  "
->
-  <div class="hero-2">
-    <h1>Explore Some Of Our Featured Herbs</h1>
-    <div class="featured-plants">
-      <% for (let i = 0; i < 8; i++) { %>
-      <div class="featured-plant">plant <%- i+1 %></div>
-      <% } %>
-    </div>
-    <a href="#" class="btn hero-2-btn" type="button"
-      >Discover More &nbsp;<i class="fa-solid fa-arrow-right"></i
-    ></a>
-  </div>
-</div>
-<div
-  class="box"
-  style="
-    background-image: url(https://images.unsplash.com/photo-1719702702556-43c793e2b625?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  "
->
-  <div class="hero-3">
-    <div class="hero-3-left">
-      <img
-        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt=""
-      />
-    </div>
-    <div class="hero-3-right">
-      <h1>About The Project</h1>
-      <p>
-        The Virtual Herbal Garden is a digital sanctuary that brings the ancient
-        wisdom of herbal medicine into the modern world. This immersive platform
-        allows users to explore a rich collection of medicinal plants, each
-        meticulously detailed with its botanical characteristics, healing
-        properties, and traditional uses. Whether you're a student,
-        practitioner, or simply an enthusiast of natural remedies, the Virtual
-        Herbal Garden offers an educational and engaging experience that makes
-        the knowledge of herbal medicine accessible to all.
-      </p>
+  <div
+    class="box"
+    style="
+      background-image: url(https://images.unsplash.com/photo-1696767230472-d1ece3dc6e1a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    "
+  >
+    <div class="hero-3">
+      <div class="hero-3-left">
+        <img
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </div>
+      <div class="hero-3-right">
+        <h1>About The Project</h1>
+        <p>
+          The Virtual Herbal Garden is a digital sanctuary that brings the
+          ancient wisdom of herbal medicine into the modern world. This
+          immersive platform allows users to explore a rich collection of
+          medicinal plants, each meticulously detailed with its botanical
+          characteristics, healing properties, and traditional uses. Whether
+          you're a student, practitioner, or simply an enthusiast of natural
+          remedies, the Virtual Herbal Garden offers an educational and engaging
+          experience that makes the knowledge of herbal medicine accessible to
+          all.
+        </p>
 
-      <p>
-        At the heart of the Virtual Herbal Garden lies an array of interactive
-        features designed to enhance your learning journey. Users can explore
-        realistic 3D models of plants, delve into comprehensive multimedia
-        content, and embark on guided virtual tours that highlight specific
-        themes like digestive health, immunity, and skincare. By combining the
-        power of technology with the age-old practices of herbal healing, the
-        Virtual Herbal Garden provides a unique opportunity to connect with
-        nature and discover the therapeutic benefits of plants from the comfort
-        of your home.
-      </p>
+        <p>
+          At the heart of the Virtual Herbal Garden lies an array of interactive
+          features designed to enhance your learning journey. Users can explore
+          realistic 3D models of plants, delve into comprehensive multimedia
+          content, and embark on guided virtual tours that highlight specific
+          themes like digestive health, immunity, and skincare. By combining the
+          power of technology with the age-old practices of herbal healing, the
+          Virtual Herbal Garden provides a unique opportunity to connect with
+          nature and discover the therapeutic benefits of plants from the
+          comfort of your home.
+        </p>
+      </div>
     </div>
   </div>
 </div>

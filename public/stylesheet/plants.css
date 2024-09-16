@@ -1,0 +1,44 @@
+.plants-box {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  padding: 6rem 2rem;
+}
+
+.card {
+  height: 22rem;
+  width: 15rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  transition: 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 52%;
+  border-radius: 10px 10px 0 0;
+}
+
+.m-description {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}

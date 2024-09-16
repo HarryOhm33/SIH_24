@@ -1,0 +1,100 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+<div
+  class="show"
+  style="
+    background-image: url(https://images.unsplash.com/photo-1476553986076-d59060d397e4?q=80&w=1832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  "
+>
+  <div class="show-1">
+    <div class="show-1-left">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="<%= plant.images[0] %>" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="<%= plant.images[1] %>" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="<%= plant.images[2] %>" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="show-1-right">
+      <p><b>&#x2022; Botanical Name:</b> <%- plant.botanical_name %></p>
+      <p><b>&#x2022; Common Names:</b> <%= plant.common_names.join(', ') %></p>
+      <p><b>&#x2022; Ayurvedic Name:</b> <%= plant.ayurvedic_name %></p>
+      <p><b>&#x2022; Family:</b> <%= plant.family %></p>
+      <p><b>&#x2022; Description:</b> <%= plant.description %></p>
+    </div>
+  </div>
+  <div class="show-2">
+    <p>
+      <b>&#x2022; Medicinal Uses:</b> <%- plant.medicinal_uses.join(', ') %>
+    </p>
+    <p>
+      <b>&#x2022; Active Compounds:</b> <%- plant.active_compounds.join(', ') %>
+    </p>
+    <p><b>&#x2022; Cultivation Methods:</b> <%- plant.cultivation_methods %></p>
+    <p><b>&#x2022; Habitat:</b> <%- plant.habitat %></p>
+    <p><b>&#x2022; Traditional Uses:</b> <%- plant.traditional_uses %></p>
+    <p>
+      <b>&#x2022; Cultural Significance:</b> <%- plant.cultural_significance %>
+    </p>
+    <p>
+      <b>&#x2022; Region In India:</b> <%- plant.region_in_india.join(', ') %>
+    </p>
+    <p><b>&#x2022; Notes:</b> <%- plant.notes %></p>
+    <p>
+      <i><b>&#x2022; Popularity:</b> <%- plant.popularity %></i>
+    </p>
+    <p>
+      <i><b>&#x2022; Date Added:</b> <%- plant.date_added %></i>
+    </p>
+  </div>
+</div>
