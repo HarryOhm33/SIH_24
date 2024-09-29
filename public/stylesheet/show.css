@@ -45,12 +45,45 @@
   margin-bottom: 1.3rem;
 }
 
+.show-1-right a {
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 20px;
+  background-color: rgb(28, 211, 28);
+}
+
+.show-description {
+  color: white;
+  margin: 1rem 2rem;
+  font-size: 1.35rem;
+}
+
+.show-description p {
+  margin-left: 1rem;
+}
+
+.multimedia {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.multimedia iframe {
+  border-radius: 10px;
+}
+
 .show-2 {
   color: white;
-  margin: 0 2rem;
+  margin: 1rem 2rem;
   font-size: 1.35rem;
 }
 
 .show-2 p {
   margin-bottom: 1.3rem;
+  margin-left: 1rem;
 }

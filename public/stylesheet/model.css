@@ -1,0 +1,33 @@
+.model-box {
+  height: fit-content;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.model-box a {
+  width: fit-content;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+}
+
+.model-box p {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.model {
+  align-self: center;
+  justify-self: center;
+}
+
+.model spline-viewer .container {
+  border-radius: 20px;
+  width: 70%;
+  border-radius: 10px;
+}

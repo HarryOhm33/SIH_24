@@ -70,13 +70,38 @@
       <p><b>&#x2022; Common Names:</b> <%= plant.common_names.join(', ') %></p>
       <p><b>&#x2022; Ayurvedic Name:</b> <%= plant.ayurvedic_name %></p>
       <p><b>&#x2022; Family:</b> <%= plant.family %></p>
-      <p><b>&#x2022; Description:</b> <%= plant.description %></p>
+      <p>
+        <b>&#x2022; Medicinal Uses:</b> <%= plant.medicinal_uses.join(', ') %>
+      </p>
+      <a href="/garden/plants/<%= plant.id %>/3d"
+        ><i class="fa-solid fa-cube"></i> &nbsp;View In 3D</a
+      >
+    </div>
+  </div>
+  <div class="show-description">
+    <h2>Description & Multimedia</h2>
+    <p><%= plant.description%></p>
+    <div class="multimedia">
+      <iframe
+        width="460"
+        height="275"
+        src="<%= plant.videos[0] %>"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="460"
+        height="275"
+        src="<%= plant.videos[1] %>"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
   </div>
   <div class="show-2">
-    <p>
-      <b>&#x2022; Medicinal Uses:</b> <%- plant.medicinal_uses.join(', ') %>
-    </p>
+    <h2>Additional Info</h2>
     <p>
       <b>&#x2022; Active Compounds:</b> <%- plant.active_compounds.join(', ') %>
     </p>

@@ -29,6 +29,8 @@ app.get("/garden", async (req, res) => {
   res.render("garden/hero.ejs", { featuredPlants });
 });
 
+// app.get("/garden/about");
+
 app.get("/garden/plants", async (req, res) => {
   let plants = await Plant.find({});
   res.render("garden/plants.ejs", { plants });
@@ -38,6 +40,12 @@ app.get("/garden/plants/:id", async (req, res) => {
   let plantID = req.params;
   let plant = await Plant.findById(plantID.id);
   res.render("garden/show.ejs", { plant });
+});
+
+app.get("/garden/plants/:id/3d", async (req, res) => {
+  let plantID = req.params;
+  let plant = await Plant.findById(plantID.id);
+  res.render("garden/model.ejs", { plant });
 });
 
 app.get("/user/login", (req, res) => {
